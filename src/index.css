@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 70 72 212;
+    --color-primary-container: 96 99 238;
+    --color-on-primary: 255 255 255;
+    --color-on-primary-container: 255 251 255;
+    --color-secondary: 180 19 109;
+    --color-secondary-container: 253 86 167;
+    --color-on-secondary: 255 255 255;
+    --color-on-secondary-container: 96 0 55;
+    --color-tertiary: 0 108 73;
+    --color-tertiary-container: 0 136 93;
+    --color-on-tertiary: 255 255 255;
+    --color-on-tertiary-container: 0 7 3;
+    --color-background: 248 249 255;
+    --color-on-background: 11 28 48;
+    --color-surface: 248 249 255;
+    --color-surface-dim: 203 219 245;
+    --color-surface-bright: 248 249 255;
+    --color-surface-container-lowest: 255 255 255;
+    --color-surface-container-low: 239 244 255;
+    --color-surface-container: 229 238 255;
+    --color-surface-container-high: 220 233 255;
+    --color-surface-container-highest: 211 228 254;
+    --color-on-surface: 11 28 48;
+    --color-on-surface-variant: 70 69 84;
+    --color-surface-variant: 211 228 254;
+    --color-surface-tint: 73 75 214;
+    --color-inverse-surface: 33 49 69;
+    --color-inverse-on-surface: 234 241 255;
+    --color-error: 186 26 26;
+    --color-on-error: 255 255 255;
+    --color-error-container: 255 218 214;
+    --color-on-error-container: 147 0 10;
+    --color-outline: 118 117 134;
+    --color-outline-variant: 199 196 215;
+  }
+
+  .dark {
+    --color-primary: 180 181 255;
+    --color-primary-container: 63 65 184;
+    --color-on-primary: 26 27 110;
+    --color-on-primary-container: 224 224 255;
+    --color-secondary: 255 176 208;
+    --color-secondary-container: 140 0 85;
+    --color-on-secondary: 92 0 51;
+    --color-on-secondary-container: 255 217 230;
+    --color-tertiary: 93 219 170;
+    --color-tertiary-container: 0 82 54;
+    --color-on-tertiary: 0 56 35;
+    --color-on-tertiary-container: 126 248 197;
+    --color-background: 15 19 24;
+    --color-on-background: 223 227 235;
+    --color-surface: 15 19 24;
+    --color-surface-dim: 15 19 24;
+    --color-surface-bright: 53 57 64;
+    --color-surface-container-lowest: 10 14 19;
+    --color-surface-container-low: 23 27 34;
+    --color-surface-container: 27 31 38;
+    --color-surface-container-high: 38 42 49;
+    --color-surface-container-highest: 49 53 60;
+    --color-on-surface: 223 227 235;
+    --color-on-surface-variant: 198 197 215;
+    --color-surface-variant: 68 68 79;
+    --color-surface-tint: 180 181 255;
+    --color-inverse-surface: 223 227 235;
+    --color-inverse-on-surface: 44 48 57;
+    --color-error: 255 180 171;
+    --color-on-error: 105 0 5;
+    --color-error-container: 147 0 10;
+    --color-on-error-container: 255 218 214;
+    --color-outline: 144 143 160;
+    --color-outline-variant: 70 70 79;
+  }
+
+  body {
+    -webkit-tap-highlight-color: transparent;
+    @apply bg-background text-on-background text-body-md antialiased;
+    min-height: 100dvh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .circle-progress {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 70;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
